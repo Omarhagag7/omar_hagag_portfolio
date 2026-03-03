@@ -308,67 +308,122 @@ ul { list-style: none; }
 }
 .stat__label { font-size: .8rem; color: var(--text-muted); margin-top: .3rem; }
 
-/* Hero visual */
-.hero__right { display: flex; justify-content: center; }
-
-.hero__avatar-wrap {
-  position: relative;
-  width: 340px;
-  height: 400px;
-}
-
-.hero__photo-frame {
-  width: 280px;
-  height: 320px;
-  background: linear-gradient(145deg, var(--accent-bg) 0%, #d8f3dc 100%);
-  border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%;
+/* Hero visual — 3-phone scene */
+.hero__right {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 30px auto 0;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--accent-light);
-}
-.hero__initials-block {
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem;
-  font-weight: 700;
-  color: var(--accent);
-  opacity: .7;
+  align-items: center;
 }
 
-/* Floating cards */
-.hero__floating-card {
-  position: absolute;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: .55rem 1.1rem;
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--text);
-  box-shadow: var(--shadow-md);
+.phones-scene {
+  position: relative;
+  width: 380px;
+  height: 480px;
   display: flex;
-  align-items: center;
-  gap: .5rem;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Shared phone styles */
+.phone {
+  position: absolute;
+  bottom: 0;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.phone__frame {
+  border-radius: 36px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,.15);
+  box-shadow:
+    0 32px 64px rgba(0,0,0,.22),
+    0 8px 16px rgba(0,0,0,.12),
+    inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.phone__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Center phone — largest, front */
+.phone--center {
+  z-index: 3;
+  transform: translateY(0) scale(1);
+}
+.phone--center .phone__frame {
+  width: 180px;
+  height: 368px;
+}
+
+/* Left phone — rotated, smaller, behind */
+.phone--left {
+  z-index: 2;
+  left: 0;
+  transform: translateX(20px) translateY(40px) rotate(-8deg) scale(0.88);
+  transform-origin: bottom center;
+  filter: brightness(.88);
+}
+.phone--left .phone__frame {
+  width: 160px;
+  height: 326px;
+}
+
+/* Right phone — rotated other way, smaller, behind */
+.phone--right {
+  z-index: 2;
+  right: 0;
+  transform: translateX(-20px) translateY(40px) rotate(8deg) scale(0.88);
+  transform-origin: bottom center;
+  filter: brightness(.88);
+}
+.phone--right .phone__frame {
+  width: 160px;
+  height: 326px;
+}
+
+/* Hover lifts center phone */
+.phones-scene:hover .phone--center {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(0,0,0,.25);
+}
+.phones-scene:hover .phone--left {
+  transform: translateX(10px) translateY(50px) rotate(-10deg) scale(0.86);
+}
+.phones-scene:hover .phone--right {
+  transform: translateX(-10px) translateY(50px) rotate(10deg) scale(0.86);
+}
+
+/* Label under center phone */
+.phone__label {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: .04em;
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
   white-space: nowrap;
 }
-.fc-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  display: inline-block;
-  flex-shrink: 0;
-}
-.fc-dot--green {
-  background: #22c55e;
-  box-shadow: 0 0 0 3px rgba(34,197,94,.2);
-  animation: pulse 2s infinite;
-}
-.fc-icon { font-size: 1rem; }
 
-.card--1 { top: 10px; right: 0; }
-.card--2 { top: 120px; right: -20px; }
-.card--3 { bottom: 40px; right: 10px; }
+/* Soft glow behind phones */
+.phones-scene::before {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 60px;
+  background: radial-gradient(ellipse, rgba(45,106,79,.18) 0%, transparent 70%);
+  filter: blur(16px);
+  z-index: 1;
+  pointer-events: none;
+}
 
 @keyframes pulse {
   0%,100% { opacity:1; transform:scale(1); }
@@ -786,7 +841,10 @@ ul { list-style: none; }
   .hero__subtitle { margin: 0 auto 2.5rem; }
   .hero__actions { justify-content: center; }
   .hero__stats { justify-content: center; }
-  .hero__floating-card { display: none; }
+  .phone--left,
+  .phone--right { display: none; }
+  .phones-scene { width: 180px; height: 400px; }
+  .phone--center { position: relative; }
   .about__grid { grid-template-columns: 1fr; gap: 3rem; }
   .exp-grid { grid-template-columns: 1fr; }
   .exp-card--featured { grid-column: 1; }
