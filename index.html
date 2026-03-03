@@ -3,445 +3,439 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Omar Hagag — Senior Product Designer · MBChB</title>
+  <title>Omar Hagag — Senior Product Designer</title>
+  <meta name="description" content="Clinically trained Senior Product Designer. 6 years building complex digital products across health, logistics and enterprise." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="is-loading">
 
-  <!-- NAV -->
+  <!-- ═══════════════════════════════════ NAV ═══ -->
   <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#hero" class="nav__logo">OH.</a>
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact" class="nav__cta">Get in touch</a></li>
-      </ul>
-      <button class="nav__burger" id="burger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <a href="#hero" class="nav__logo">OH.</a>
+    <ul class="nav__links">
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#work">WORK</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#experience" class="mobile-link">Experience</a></li>
-      <li><a href="#skills" class="mobile-link">Skills</a></li>
-      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="#services" class="mobile-link">SERVICES</a></li>
+      <li><a href="#work" class="mobile-link">WORK</a></li>
+      <li><a href="#about" class="mobile-link">ABOUT</a></li>
+      <li><a href="#contact" class="mobile-link">CONTACT</a></li>
     </ul>
   </div>
 
-  <!-- HERO -->
+  <!-- ═══════════════════════════════════ HERO ═══ -->
   <section class="hero" id="hero">
-    <div class="hero__left">
-      <div class="hero__content reveal">
-        <div class="hero__dual-badge">
-          <span class="dual-pill dual-pill--clinical">MBChB · Clinician</span>
-          <span class="dual-pill dual-pill--design">Senior Product Designer</span>
-        </div>
-        <h1 class="hero__title">
-          Omar<br /><em>Hagag</em>
-        </h1>
-        <p class="hero__subtitle">
-          Clinically trained product designer with 6 years building complex digital products
-          across web, mobile, and multi-user platforms — specialising in digital health,
-          clinical workflows, and operational systems.
-        </p>
-        <div class="hero__actions">
-          <a href="#experience" class="btn btn--primary">View my work</a>
-          <a href="mailto:Omarhagag777@gmail.com" class="btn btn--ghost">Get in touch</a>
+    <h1 class="sr-only">Omar Hagag — Senior Product Designer</h1>
+
+    <div class="hero__label hero-el" aria-hidden="true">— WELCOME</div>
+
+    <!-- "OMAR" sits BEHIND the photo -->
+    <div class="hero__name hero__name--back hero-el" aria-hidden="true">OMAR</div>
+
+    <!-- Photo blends into pure black via mix-blend-mode: lighten -->
+    <div class="hero__photo-wrap hero-el">
+      <img
+        src="images/IMG_5799.JPG"
+        alt="Omar Hagag"
+        class="hero__photo"
+        loading="eager"
+      />
+    </div>
+
+    <!-- "HAGAG" sits IN FRONT of the photo -->
+    <div class="hero__name hero__name--front hero-el" aria-hidden="true">HAGAG</div>
+
+    <!-- Bottom meta -->
+    <div class="hero__bottom hero-el">
+      <span class="hero__location">BASED IN TORONTO, CANADA</span>
+      <span class="hero__role">Senior Product Designer &nbsp;·&nbsp; Digital Health Specialist &nbsp;·&nbsp; MBChB</span>
+      <a href="#services" class="hero__scroll" aria-label="Scroll down">↓ SCROLL</a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ INTRO ═══ -->
+  <section class="intro">
+    <div class="container">
+      <p class="intro__text reveal">
+        Clinically trained designer. 6 years building
+        <span class="accent">complex digital products</span>
+        across health, logistics, and enterprise —
+        from deep user research to pixel-perfect delivery.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ SERVICES ═══ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">— MY SUPERPOWERS</span>
+        <h2 class="section__title">Here's what I<br /><em>actually do</em></h2>
+      </div>
+    </div>
+
+    <div class="services__rows">
+
+      <div class="service-row reveal" data-index="0">
+        <button class="service-row__trigger" aria-expanded="false">
+          <div class="service-row__left">
+            <span class="service-row__num">01</span>
+            <span class="service-row__title">UX &amp; Product Design</span>
+          </div>
+          <span class="service-row__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="service-row__body" aria-hidden="true">
+          <p>End-to-end product design across mobile, tablet, and multi-user dashboards. I translate ambiguous operational requirements into clear, scalable experiences — from early discovery through delivery and iteration.</p>
+          <div class="service-row__tags">
+            <span>Complex workflows</span><span>Interaction design</span>
+            <span>User flows</span><span>Mobile &amp; tablet</span><span>Dashboards</span>
+          </div>
         </div>
       </div>
-      <div class="hero__stats reveal reveal--delay">
-        <div class="stat">
-          <span class="stat__num">6+</span>
-          <span class="stat__label">Years in product design</span>
+
+      <div class="service-row reveal" data-index="1">
+        <button class="service-row__trigger" aria-expanded="false">
+          <div class="service-row__left">
+            <span class="service-row__num">02</span>
+            <span class="service-row__title">Clinical Workflow Design</span>
+          </div>
+          <span class="service-row__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="service-row__body" aria-hidden="true">
+          <p>Unique clinical background (MBChB) meets product design. I understand how healthcare teams actually work — and design systems that reduce friction at every step of the clinical journey.</p>
+          <div class="service-row__tags">
+            <span>Digital health</span><span>Patient workflows</span>
+            <span>Clinical systems</span><span>EHR/EMR</span><span>Healthcare ops</span>
+          </div>
         </div>
-        <div class="stat">
-          <span class="stat__num">MBChB</span>
-          <span class="stat__label">Medical degree</span>
+      </div>
+
+      <div class="service-row reveal" data-index="2">
+        <button class="service-row__trigger" aria-expanded="false">
+          <div class="service-row__left">
+            <span class="service-row__num">03</span>
+            <span class="service-row__title">Design Systems &amp; Ops</span>
+          </div>
+          <span class="service-row__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="service-row__body" aria-hidden="true">
+          <p>Building the foundation that makes design teams fast and consistent. From atomic components to governance frameworks, I establish scalable systems that survive team growth and product evolution.</p>
+          <div class="service-row__tags">
+            <span>Component architecture</span><span>Token systems</span>
+            <span>Governance</span><span>Cross-team alignment</span>
+          </div>
         </div>
-        <div class="stat">
-          <span class="stat__num">5+</span>
-          <span class="stat__label">Companies shipped</span>
+      </div>
+
+      <div class="service-row reveal" data-index="3">
+        <button class="service-row__trigger" aria-expanded="false">
+          <div class="service-row__left">
+            <span class="service-row__num">04</span>
+            <span class="service-row__title">Research &amp; Strategy</span>
+          </div>
+          <span class="service-row__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="service-row__body" aria-hidden="true">
+          <p>I don't design without understanding. Deep user research, journey mapping, and information architecture work that ensures every design decision is grounded in real user needs and business outcomes.</p>
+          <div class="service-row__tags">
+            <span>User research</span><span>Journey mapping</span>
+            <span>Information architecture</span><span>Usability testing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-row reveal" data-index="4">
+        <button class="service-row__trigger" aria-expanded="false">
+          <div class="service-row__left">
+            <span class="service-row__num">05</span>
+            <span class="service-row__title">AI &amp; Emerging Tech</span>
+          </div>
+          <span class="service-row__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="service-row__body" aria-hidden="true">
+          <p>Designing for and with AI — from LLM-assisted clinical decision support to AI-powered operational workflows. I help teams figure out where AI creates real value, and how to design interactions humans actually trust.</p>
+          <div class="service-row__tags">
+            <span>LLM integration</span><span>AI-assisted workflows</span>
+            <span>Conversational UI</span><span>Human-AI interaction</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ WORK ═══ -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">— SELECTED WORK</span>
+        <h2 class="section__title">Projects I'm<br /><em>proud of</em></h2>
+      </div>
+    </div>
+
+    <div class="work__tabs-nav">
+      <div class="container">
+        <button class="work__tab is-active" data-tab="parent">Parent</button>
+        <button class="work__tab" data-tab="metrospeedy">MetroSpeedy</button>
+        <button class="work__tab" data-tab="kian">Kian Alraqmih</button>
+        <button class="work__tab" data-tab="earlier">Earlier Roles</button>
+      </div>
+    </div>
+
+    <!-- PARENT -->
+    <div class="work__project is-active" id="tab-parent">
+      <div class="work__project-inner container">
+        <div class="work__project-visual">
+          <div class="work__mockup work__mockup--teal">
+            <div class="mockup-ui">
+              <div class="mui-bar"></div>
+              <div class="mui-row"><div class="mui-block wide"></div><div class="mui-block"></div></div>
+              <div class="mui-row"><div class="mui-block"></div><div class="mui-block"></div><div class="mui-block"></div></div>
+              <div class="mui-card tall"></div>
+              <div class="mui-row"><div class="mui-block wide"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="work__project-details">
+          <span class="work__project-period">JUL 2024 – PRESENT · TORONTO, CANADA</span>
+          <h3 class="work__project-title">Senior Product Designer</h3>
+          <p class="work__project-desc">Led end-to-end product design across mobile, tablet, and multi-user dashboards — translating complex operational workflows into clear, scalable experiences for different user types.</p>
+          <ul class="work__project-bullets">
+            <li>Discovery, journey mapping, wireframing, prototyping</li>
+            <li>Improved workflow clarity across core platform journeys</li>
+            <li>Reduced friction and strengthened cross-role consistency</li>
+          </ul>
+          <div class="work__project-tags">
+            <span>MOBILE DESIGN</span><span>MULTI-USER DASHBOARDS</span>
+            <span>HEALTHTECH</span><span>REMOTE</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="hero__right reveal reveal--delay">
-      <div class="hero__photo-scene">
-        <div class="hero__photo-wrap">
-          <img src="images/omar-profile.jpg" alt="Omar Hagag" class="hero__photo" />
-          <div class="hero__photo-fade"></div>
+    <!-- METROSPEEDY -->
+    <div class="work__project" id="tab-metrospeedy">
+      <div class="work__project-inner container">
+        <div class="work__project-visual">
+          <div class="work__mockup work__mockup--amber">
+            <div class="work__phones-row">
+              <div class="mini-phone">
+                <img src="images/screen-home.png" alt="MetroSpeedy driver app" />
+              </div>
+              <div class="mini-phone mini-phone--offset">
+                <img src="images/screen-dish.png" alt="MetroSpeedy dispatcher" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero__floating-card card--1">
-          <span class="fc-dot fc-dot--green"></span>
-          <span>Available for new projects</span>
+        <div class="work__project-details">
+          <span class="work__project-period">FEB 2023 – MAR 2024 · NEW YORK, USA</span>
+          <h3 class="work__project-title">Senior Product Designer</h3>
+          <p class="work__project-desc">Designed the Driver App and Dispatcher, Business, and Admin dashboards — simplifying complex multi-stakeholder journeys across role-based experiences for a last-mile logistics platform.</p>
+          <ul class="work__project-bullets">
+            <li>Driver, Dispatcher, Business & Admin dashboard design</li>
+            <li>Clearer information architecture across operational handoffs</li>
+            <li>More usable cross-role interactions at scale</li>
+          </ul>
+          <div class="work__project-tags">
+            <span>DRIVER APP</span><span>ADMIN DASHBOARDS</span>
+            <span>LOGISTICS</span><span>ROLE-BASED UX</span>
+          </div>
         </div>
-        <div class="hero__floating-card card--2">
-          <span class="fc-icon">🏥</span>
-          <span>Digital Health Specialist</span>
+      </div>
+    </div>
+
+    <!-- KIAN -->
+    <div class="work__project" id="tab-kian">
+      <div class="work__project-inner container">
+        <div class="work__project-visual">
+          <div class="work__mockup work__mockup--purple">
+            <div class="mockup-ui">
+              <div class="mui-bar"></div>
+              <div class="mui-nav"><div class="mn-item active"></div><div class="mn-item"></div><div class="mn-item"></div></div>
+              <div class="mui-card"></div>
+              <div class="mui-row"><div class="mui-block"></div><div class="mui-block wide"></div></div>
+              <div class="mui-card"></div>
+            </div>
+          </div>
         </div>
-        <div class="hero__floating-card card--3">
-          <span class="fc-icon">📍</span>
-          <span>Toronto / Remote</span>
+        <div class="work__project-details">
+          <span class="work__project-period">AUG 2021 – JUN 2024 · RIYADH, SAUDI ARABIA</span>
+          <h3 class="work__project-title">Product Design Lead → Senior Designer</h3>
+          <p class="work__project-desc">Led design delivery across multiple app and web products — aligning UX with business goals, establishing scalable patterns, and driving consistency across teams over 3 years.</p>
+          <ul class="work__project-bullets">
+            <li>Led design across multiple simultaneous product streams</li>
+            <li>Built reusable component patterns and cross-team design systems</li>
+            <li>User research, IA, wireframing, prototyping, interaction design</li>
+          </ul>
+          <div class="work__project-tags">
+            <span>DESIGN SYSTEMS</span><span>DESIGN LEADERSHIP</span>
+            <span>SAAS</span><span>ENTERPRISE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EARLIER -->
+    <div class="work__project" id="tab-earlier">
+      <div class="work__project-inner container">
+        <div class="work__project-visual">
+          <div class="work__mockup work__mockup--mixed">
+            <div class="mockup-ui">
+              <div class="mui-grid">
+                <div class="mg-item"></div><div class="mg-item"></div>
+                <div class="mg-item"></div><div class="mg-item"></div>
+              </div>
+              <div class="mui-bar"></div>
+              <div class="mui-row"><div class="mui-block wide"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="work__project-details">
+          <span class="work__project-period">2020 – 2022 · DUBAI / RIYADH</span>
+          <h3 class="work__project-title">UI/UX Designer</h3>
+          <p class="work__project-desc">Built strong foundations across ICIGAI, Evaro, Tartil, and Gameball — gaining broad exposure to different product types, service flows, and user needs across varied domains.</p>
+          <ul class="work__project-bullets">
+            <li>User research, wireframing, prototyping across 4 companies</li>
+            <li>Varied product types: EdTech, F&amp;B, loyalty, fintech</li>
+            <li>Usability testing and iterative delivery</li>
+          </ul>
+          <div class="work__project-tags">
+            <span>EDTECH</span><span>FINTECH</span>
+            <span>LOYALTY</span><span>FOUNDATIONAL UX</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about section section--alt" id="about">
+  <!-- ═══════════════════════════════════ ABOUT ═══ -->
+  <section class="about section" id="about">
     <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">— NICE TO MEET YOU</span>
+      </div>
+
       <div class="about__grid">
-        <div class="about__text reveal">
-          <span class="section__eyebrow">About me</span>
-          <h2 class="section__title">A doctor who<br /><em>designs.</em></h2>
-          <p>
-            I'm a clinically trained Senior Product Designer with an MBChB and active frontline
-            medical experience. Over 6 years I've designed complex digital products across web,
-            mobile, and multi-user platforms for healthcare, logistics, and SaaS companies.
-          </p>
-          <p>
-            I specialise in translating clinical, operational, and user needs into clear,
-            accessible, lower-friction workflows — combining product discovery, interaction design,
-            service design, and cross-functional delivery.
-          </p>
-          <div class="about__highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🩺</span>
-              <span>Active clinician with concurrent senior product design experience</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">📱</span>
-              <span>6 years designing workflow-heavy products across web, mobile & dashboards</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🏥</span>
-              <span>Strong fit for digital health, clinical workflows & patient-centred design</span>
-            </div>
+        <div class="about__photo-col reveal">
+          <div class="about__photo-wrap">
+            <img src="images/IMG_5799.JPG" alt="Omar Hagag" class="about__photo" />
           </div>
         </div>
 
-        <div class="about__focus reveal reveal--delay">
-          <div class="focus-block">
-            <h3 class="focus-block__title">Healthcare & Product Focus</h3>
-            <ul class="focus-list">
-              <li>Digital Health</li>
-              <li>Clinical Workflow Design</li>
-              <li>Multi-User Operational Platforms</li>
-              <li>Web, Mobile Apps & Dashboards</li>
-              <li>Complex Operational Workflows</li>
-            </ul>
+        <div class="about__content reveal reveal--delay">
+          <h2 class="about__title">A doctor<br />who <em>designs.</em></h2>
+          <p class="about__bio">
+            Clinically trained Senior Product Designer with an MBChB and active frontline medical experience. I've spent 6 years designing complex digital products across web, mobile, and multi-user platforms — specialising in translating clinical, operational, and user needs into clear, lower-friction workflows.
+          </p>
+
+          <div class="about__table">
+            <div class="about__row">
+              <span class="about__key">BASED IN</span>
+              <span class="about__val">Toronto, Ontario, Canada</span>
+            </div>
+            <div class="about__row">
+              <span class="about__key">EDUCATION</span>
+              <span class="about__val">MBChB · Mansoura University, Manchester Medical Program (2016–2022)</span>
+            </div>
+            <div class="about__row">
+              <span class="about__key">FOCUS</span>
+              <span class="about__val">Digital Health · Clinical Workflow Design · Complex Operational Platforms</span>
+            </div>
+            <div class="about__row">
+              <span class="about__key">ALSO</span>
+              <span class="about__val">Active GP · Google UX Certificate · Interaction Design Foundation</span>
+            </div>
           </div>
-          <div class="focus-block">
-            <h3 class="focus-block__title">Core Strengths</h3>
-            <ul class="focus-list">
-              <li>Clinical reasoning & evidence-based thinking</li>
-              <li>Systems thinking & workflow design</li>
-              <li>User research & service design</li>
-              <li>Cross-functional collaboration</li>
-              <li>Interaction design & information architecture</li>
-              <li>Prototyping & usability testing</li>
-              <li>Accessible & inclusive design</li>
-            </ul>
+
+          <div class="about__colleague-section">
+            <span class="about__colleague-label">How colleagues describe me</span>
+            <div class="about__colleague-tags">
+              <span>Clinical lens</span>
+              <span>Strategic thinker</span>
+              <span>Detail-oriented</span>
+              <span>Cross-functional</span>
+              <span>Systems-minded</span>
+              <span>Low ego, high output</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="experience section" id="experience">
+  <!-- ══════════════════════════════ PRINCIPLES ═══ -->
+  <section class="principles section">
     <div class="container">
       <div class="section__header reveal">
-        <span class="section__eyebrow">Work History</span>
-        <h2 class="section__title">Where I've worked</h2>
-        <p class="section__subtitle">6 years of product design across digital health, logistics, fintech, and SaaS.</p>
+        <span class="section__label">— HOW I WORK</span>
+        <h2 class="section__title">Principles I<br /><em>live by</em></h2>
       </div>
 
-      <div class="exp-grid">
-
-        <!-- Current -->
-        <article class="exp-card exp-card--featured reveal">
-          <div class="exp-card__header">
-            <div class="exp-card__meta">
-              <span class="exp-card__company">Parent</span>
-              <span class="exp-card__badge exp-card__badge--current">Current</span>
-            </div>
-            <div class="exp-card__role">Senior Product Designer</div>
-            <div class="exp-card__detail">
-              <span>Jul 2024 – Present</span>
-              <span class="sep">·</span>
-              <span>Toronto, Canada (Remote)</span>
-            </div>
-          </div>
-          <p class="exp-card__desc">
-            Led end-to-end product design across mobile, tablet, and multi-user dashboards,
-            translating complex operational workflows into clear, scalable experiences for
-            different user types. Contributed to discovery, journey mapping, wireframing,
-            prototyping, and delivery support — improving workflow clarity, reducing friction,
-            and strengthening consistency across core platform journeys.
-          </p>
-          <div class="exp-card__tags">
-            <span>Mobile Design</span><span>Multi-user Dashboards</span>
-            <span>Journey Mapping</span><span>Prototyping</span>
-          </div>
-        </article>
-
-        <article class="exp-card reveal reveal--delay">
-          <div class="exp-card__header">
-            <div class="exp-card__meta">
-              <span class="exp-card__company">Kian Alraqmih</span>
-            </div>
-            <div class="exp-card__role">Product Design Lead</div>
-            <div class="exp-card__detail">
-              <span>Feb 2024 – Jun 2024</span>
-              <span class="sep">·</span>
-              <span>Riyadh, Saudi Arabia (Remote)</span>
-            </div>
-          </div>
-          <p class="exp-card__desc">
-            Led design delivery across multiple app and web products, aligning user experience
-            with business goals and establishing scalable UX patterns across teams. Drove greater
-            consistency across product streams through reusable patterns, cross-team alignment,
-            and clearer design direction.
-          </p>
-          <div class="exp-card__tags">
-            <span>Design Leadership</span><span>Design Systems</span>
-            <span>UX Strategy</span>
-          </div>
-        </article>
-
-        <article class="exp-card reveal">
-          <div class="exp-card__header">
-            <div class="exp-card__meta">
-              <span class="exp-card__company">MetroSpeedy</span>
-            </div>
-            <div class="exp-card__role">Senior Product Designer</div>
-            <div class="exp-card__detail">
-              <span>Feb 2023 – Mar 2024</span>
-              <span class="sep">·</span>
-              <span>New York, USA (Remote)</span>
-            </div>
-          </div>
-          <p class="exp-card__desc">
-            Designed the Driver App and Dispatcher, Business, and Admin dashboards, simplifying
-            complex multi-stakeholder journeys across role-based experiences. Improved workflow
-            clarity across operational handoffs by structuring clearer information architecture
-            and more usable cross-role interactions.
-          </p>
-          <div class="exp-card__tags">
-            <span>Driver App</span><span>Admin Dashboards</span>
-            <span>Information Architecture</span><span>Role-based UX</span>
-          </div>
-        </article>
-
-        <article class="exp-card reveal reveal--delay">
-          <div class="exp-card__header">
-            <div class="exp-card__meta">
-              <span class="exp-card__company">Kian Alraqmih</span>
-            </div>
-            <div class="exp-card__role">Senior Product Designer</div>
-            <div class="exp-card__detail">
-              <span>Aug 2021 – Feb 2024</span>
-              <span class="sep">·</span>
-              <span>Riyadh, Saudi Arabia (Remote)</span>
-            </div>
-          </div>
-          <p class="exp-card__desc">
-            Designed and improved digital experiences across multiple products — contributing to
-            user research, information architecture, wireframing, prototyping, interaction design,
-            and design system consistency across app and web products in fast-paced delivery
-            environments.
-          </p>
-          <div class="exp-card__tags">
-            <span>User Research</span><span>Wireframing</span>
-            <span>Interaction Design</span><span>Design Systems</span>
-          </div>
-        </article>
-
-        <article class="exp-card exp-card--clinical reveal">
-          <div class="exp-card__header">
-            <div class="exp-card__meta">
-              <span class="exp-card__company">Secondary Healthcare Unit</span>
-              <span class="exp-card__badge exp-card__badge--clinical">Clinical</span>
-            </div>
-            <div class="exp-card__role">General Practitioner Doctor</div>
-            <div class="exp-card__detail">
-              <span>Apr 2024 – Nov 2025</span>
-              <span class="sep">·</span>
-              <span>Qalyubia, Egypt</span>
-            </div>
-          </div>
-          <p class="exp-card__desc">
-            Delivered frontline primary care in a public healthcare setting, managing clinical
-            documentation, treatment plans, and patient follow-up across routine and acute
-            presentations — bridging real clinical operations with product design insight.
-          </p>
-          <div class="exp-card__tags">
-            <span>Clinical Practice</span><span>Healthcare Operations</span>
-            <span>Patient Workflows</span>
-          </div>
-        </article>
-
-        <article class="exp-card reveal reveal--delay">
-          <div class="exp-card__header">
-            <div class="exp-card__meta">
-              <span class="exp-card__company">ICIGAI · Evaro · Tartil · Gameball</span>
-            </div>
-            <div class="exp-card__role">UI/UX Designer</div>
-            <div class="exp-card__detail">
-              <span>2020 – 2022</span>
-              <span class="sep">·</span>
-              <span>Dubai, UAE · Riyadh, KSA</span>
-            </div>
-          </div>
-          <p class="exp-card__desc">
-            Built strong foundations in user research, journey mapping, wireframing, prototyping,
-            and usability testing across early product and UI/UX roles. Gained broad exposure to
-            different product types, service flows, and user needs across varied domains.
-          </p>
-          <div class="exp-card__tags">
-            <span>UX Research</span><span>Wireframing</span>
-            <span>Usability Testing</span><span>Service Design</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills section section--alt" id="skills">
-    <div class="container">
-      <div class="section__header reveal">
-        <span class="section__eyebrow">Skills & Tools</span>
-        <h2 class="section__title">My toolkit</h2>
-      </div>
-
-      <div class="skills__row">
-        <div class="skill-group reveal">
-          <h3 class="skill-group__title">Design Tools</h3>
-          <div class="skill-chips">
-            <span>Figma</span><span>Sketch</span><span>Adobe XD</span>
-            <span>Principle</span><span>Lottie</span><span>Zeplin</span>
-          </div>
+      <div class="principles__grid">
+        <div class="principle-card reveal">
+          <span class="principle-card__num" aria-hidden="true">01</span>
+          <h3 class="principle-card__title">Clinical empathy first</h3>
+          <p class="principle-card__body">Real clinical experience means I understand what users actually go through — not just what they say in a research session. This changes every design decision.</p>
         </div>
-        <div class="skill-group reveal reveal--delay">
-          <h3 class="skill-group__title">UX Methods</h3>
-          <div class="skill-chips">
-            <span>User Research</span><span>Journey Mapping</span>
-            <span>Information Architecture</span><span>Wireframing</span>
-            <span>Prototyping</span><span>Usability Testing</span>
-            <span>Service Design</span><span>Accessibility</span>
-          </div>
+        <div class="principle-card reveal">
+          <span class="principle-card__num" aria-hidden="true">02</span>
+          <h3 class="principle-card__title">Systems over screens</h3>
+          <p class="principle-card__body">A beautiful screen that breaks the workflow is a failure. I design for the entire system — the handoffs, the edge cases, the 3am emergency use.</p>
         </div>
-        <div class="skill-group reveal reveal--delay-2">
-          <h3 class="skill-group__title">Collaboration</h3>
-          <div class="skill-chips">
-            <span>Notion</span><span>Miro</span><span>Jira</span>
-            <span>Maze</span><span>Hotjar</span><span>Confluence</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="certs-block reveal">
-        <h3 class="certs-block__title">Certifications</h3>
-        <div class="certs-grid">
-          <div class="cert-card">
-            <span class="cert-icon">🎓</span>
-            <span>Google UX Design Professional Certificate</span>
-          </div>
-          <div class="cert-card">
-            <span class="cert-icon">🎓</span>
-            <span>Interaction Design Foundation</span>
-          </div>
-          <div class="cert-card">
-            <span class="cert-icon">🎓</span>
-            <span>Project Management</span>
-          </div>
-          <div class="cert-card">
-            <span class="cert-icon">🎓</span>
-            <span>OET Gold Standard</span>
-          </div>
-          <div class="cert-card cert-card--edu">
-            <span class="cert-icon">🏛️</span>
-            <span>MBChB · Mansoura University, Manchester Medical Program (2016–2022)</span>
-          </div>
+        <div class="principle-card reveal">
+          <span class="principle-card__num" aria-hidden="true">03</span>
+          <h3 class="principle-card__title">Zero-friction outcomes</h3>
+          <p class="principle-card__body">Complexity is the enemy. Every interaction should feel obvious. If users need training to use something I designed, I haven't finished designing it.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ══════════════════════════════ CONTACT ═══ -->
   <section class="contact section" id="contact">
     <div class="container">
-      <div class="contact__inner">
-        <div class="contact__text reveal">
-          <span class="section__eyebrow">Get in touch</span>
-          <h2 class="section__title">Let's build something<br /><em>meaningful.</em></h2>
-          <p>
-            Whether you're working on a health tech product, a complex operational platform,
-            or need someone who can bridge clinical reality with great UX — I'd love to talk.
-          </p>
-          <div class="contact__links">
-            <a href="mailto:Omarhagag777@gmail.com" class="contact__link">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              Omarhagag777@gmail.com
-            </a>
-            <a href="https://linkedin.com/in/omar-hagag-587411134" target="_blank" rel="noopener" class="contact__link">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              linkedin.com/in/omar-hagag-587411134
-            </a>
-            <a href="tel:+447424381391" class="contact__link">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              +44 7424 381 391
-            </a>
-          </div>
-        </div>
-
-        <form class="contact__form reveal reveal--delay" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or role..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Send message</button>
-          <p class="form__success" id="formSuccess">Thanks! I'll get back to you soon.</p>
-        </form>
+      <span class="section__label reveal">— GET IN TOUCH</span>
+      <h2 class="contact__headline reveal">
+        Let's build something<br /><em>meaningful.</em>
+      </h2>
+      <div class="contact__links reveal">
+        <a href="mailto:Omarhagag777@gmail.com" class="contact__link">
+          Omarhagag777@gmail.com <span class="contact__arrow">↗</span>
+        </a>
+        <a href="https://linkedin.com/in/omar-hagag-587411134" target="_blank" rel="noopener" class="contact__link">
+          LinkedIn <span class="contact__arrow">↗</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ════════════════════════════════ FOOTER ═══ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <span class="nav__logo">OH.</span>
-        <p>&copy; 2025 Omar Hagag · Senior Product Designer · MBChB</p>
+        <span class="footer__logo">OH.</span>
+        <span class="footer__copy">&copy; 2025 Omar Hagag · Senior Product Designer · MBChB</span>
         <div class="footer__links">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
           <a href="#about">About</a>
-          <a href="#experience">Work</a>
-          <a href="#contact">Contact</a>
         </div>
       </div>
     </div>
   </footer>
-
-  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</a>
 
   <script src="script.js"></script>
   <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
