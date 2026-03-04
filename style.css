@@ -668,52 +668,57 @@ ul { list-style: none; }
 
 .booking-card {
   display: flex;
+  align-items: center;
   gap: 1.25rem;
-  align-items: flex-start;
-  background: rgba(52,211,153,.06);
-  border: 1px solid rgba(52,211,153,.2);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
   border-radius: var(--radius);
-  padding: 1.75rem;
+  padding: 1.5rem 1.75rem;
 }
 .booking-card__icon {
-  width: 46px; height: 46px;
+  width: 44px; height: 44px;
   flex-shrink: 0;
-  background: rgba(52,211,153,.12);
+  background: rgba(174,163,255,.15);
   border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
-  color: #34d399;
+  color: var(--accent);
+}
+.booking-card__body {
+  flex: 1;
+  min-width: 0;
 }
 .booking-card__title {
-  font-size: 1rem;
+  font-size: .95rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: .35rem;
+  margin-bottom: .25rem;
 }
 .booking-card__desc {
-  font-size: .85rem;
+  font-size: .82rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 1.1rem;
+  line-height: 1.55;
 }
 .btn--book {
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: .45rem;
   padding: .65rem 1.4rem;
-  background: #34d399;
+  background: var(--accent);
   color: #0c0c14;
   border: none;
   border-radius: 100px;
-  font-size: .88rem;
+  font-size: .85rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--t);
-  box-shadow: 0 4px 16px rgba(52,211,153,.25);
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(174,163,255,.25);
 }
 .btn--book:hover {
-  background: #6ee7b7;
+  background: var(--accent-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(52,211,153,.35);
+  box-shadow: 0 8px 24px rgba(174,163,255,.35);
 }
 
 .contact__divider {
@@ -864,6 +869,8 @@ ul { list-style: none; }
 @media (max-width: 640px) {
   .nav__links { display: none; }
   .nav__burger { display: flex; }
+  .booking-card { flex-wrap: wrap; }
+  .btn--book { width: 100%; justify-content: center; }
   .section { padding: 72px 0; }
   .hero__floating-card { display: none; }
   .footer__inner { flex-direction: column; text-align: center; }
