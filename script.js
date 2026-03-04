@@ -74,7 +74,7 @@ sections.forEach(s => sectionObserver.observe(s));
 const form = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name = form.name.value.trim();
@@ -83,18 +83,38 @@ form.addEventListener('submit', (e) => {
 
   if (!name || !email || !message) return;
 
-  // Simulate sending (replace with real endpoint / EmailJS / Formspree)
   const btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
-  setTimeout(() => {
-    form.reset();
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: 'd3ea528c-1882-48df-929d-564d5bf70472',
+        name,
+        email,
+        message,
+        subject: `New message from ${name} — omarhagag.com`,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      form.reset();
+      formSuccess.classList.add('visible');
+      setTimeout(() => formSuccess.classList.remove('visible'), 5000);
+    } else {
+      alert('Something went wrong. Please email me directly at Hello@omarhagag.com');
+    }
+  } catch {
+    alert('Network error. Please email me directly at Hello@omarhagag.com');
+  } finally {
     btn.textContent = 'Send message';
     btn.disabled = false;
-    formSuccess.classList.add('visible');
-    setTimeout(() => formSuccess.classList.remove('visible'), 5000);
-  }, 1200);
+  }
 });
 
 /* =========================================
