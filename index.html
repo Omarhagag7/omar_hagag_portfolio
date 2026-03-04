@@ -410,22 +410,45 @@
           </div>
         </div>
 
-        <form class="contact__form reveal reveal--delay" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+        <div class="contact__right reveal reveal--delay">
+
+          <!-- Book a meeting -->
+          <div class="booking-card">
+            <div class="booking-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+            </div>
+            <div class="booking-card__body">
+              <h3 class="booking-card__title">Book a meeting</h3>
+              <p class="booking-card__desc">Schedule a 30-minute intro call to discuss your project, role, or idea — straight on my calendar.</p>
+              <button class="btn btn--book" data-cal-link="omarhagag" data-cal-config='{"theme":"dark"}'>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+                Book a call
+              </button>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or role..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Send message</button>
-          <p class="form__success" id="formSuccess">Thanks! I'll get back to you soon.</p>
-        </form>
+
+          <!-- Divider -->
+          <div class="contact__divider"><span>or send a message</span></div>
+
+          <!-- Form -->
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me about your project or role..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send message</button>
+            <p class="form__success" id="formSuccess">Thanks! I'll get back to you soon.</p>
+          </form>
+
+        </div>
       </div>
     </div>
   </section>
@@ -448,6 +471,7 @@
   <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</a>
 
   <script src="script.js"></script>
+  <script type="module" src="https://app.cal.com/embed/embed.js"></script>
   <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 </body>
 </html>
