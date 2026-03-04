@@ -75,7 +75,41 @@ ul { list-style: none; }
   color: var(--text);
   margin-bottom: 1rem;
 }
-.section__title em { font-style: italic; color: var(--accent); }
+.section__title em {
+  font-style: italic;
+  background: linear-gradient(120deg, #c084fc 0%, #aea3ff 45%, #e879f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: highlight-shimmer 5s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+.section__title em::before {
+  content: '✦';
+  position: absolute;
+  top: -0.25em;
+  right: -0.55em;
+  font-size: 0.4em;
+  color: #c084fc;
+  -webkit-text-fill-color: #c084fc;
+  font-style: normal;
+  animation: sparkle-a 2.2s ease-in-out infinite;
+  pointer-events: none;
+}
+.section__title em::after {
+  content: '✦';
+  position: absolute;
+  bottom: 0.05em;
+  left: -0.5em;
+  font-size: 0.28em;
+  color: #aea3ff;
+  -webkit-text-fill-color: #aea3ff;
+  font-style: normal;
+  animation: sparkle-b 3s ease-in-out infinite;
+  pointer-events: none;
+}
 
 .section__subtitle { color: var(--text-secondary); font-size: 1.05rem; }
 
@@ -254,9 +288,23 @@ ul { list-style: none; }
   border-radius: 100px;
 }
 .dual-pill--clinical {
-  background: rgba(251,146,60,.1);
-  color: #fb923c;
-  border: 1px solid rgba(251,146,60,.2);
+  background: rgba(192,132,252,.1);
+  color: #c084fc;
+  border: 1px solid rgba(192,132,252,.25);
+  position: relative;
+  overflow: hidden;
+}
+.dual-pill--clinical::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(232,121,249,.25), transparent);
+  transform: translateX(-100%);
+  animation: pill-shimmer 2.8s ease-in-out infinite;
+}
+@keyframes pill-shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%);  }
 }
 .dual-pill--design {
   background: var(--accent-bg);
@@ -276,8 +324,38 @@ ul { list-style: none; }
 }
 .hero__title em {
   font-style: italic;
-  color: var(--accent);
-  display: block;
+  background: linear-gradient(120deg, #c084fc 0%, #aea3ff 45%, #e879f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: highlight-shimmer 5s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+.hero__title em::before {
+  content: '✦';
+  position: absolute;
+  top: -0.2em;
+  right: -0.45em;
+  font-size: 0.38em;
+  color: #c084fc;
+  -webkit-text-fill-color: #c084fc;
+  font-style: normal;
+  animation: sparkle-a 2s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero__title em::after {
+  content: '✦';
+  position: absolute;
+  bottom: 0.1em;
+  left: -0.45em;
+  font-size: 0.28em;
+  color: #e879f9;
+  -webkit-text-fill-color: #e879f9;
+  font-style: normal;
+  animation: sparkle-b 2.8s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .hero__subtitle {
@@ -393,6 +471,23 @@ ul { list-style: none; }
 
 @keyframes blink {
   0%,100% { opacity:1; } 50% { opacity:.4; }
+}
+
+@keyframes highlight-shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes sparkle-a {
+  0%,100% { transform: rotate(0deg)   scale(1);   opacity: .85; }
+  30%     { transform: rotate(45deg)  scale(1.55); opacity: 1;   }
+  65%     { transform: rotate(-15deg) scale(.55);  opacity: .25; }
+}
+
+@keyframes sparkle-b {
+  0%,100% { transform: rotate(0deg)    scale(.8);  opacity: .5; }
+  40%     { transform: rotate(-45deg)  scale(1.35); opacity: 1;  }
+  72%     { transform: rotate(20deg)   scale(.45);  opacity: .2; }
 }
 
 /* =========================================
@@ -516,9 +611,9 @@ ul { list-style: none; }
   border: 1px solid rgba(34,197,94,.2);
 }
 .exp-card__badge--clinical {
-  background: rgba(251,146,60,.12);
-  color: #fb923c;
-  border: 1px solid rgba(251,146,60,.2);
+  background: rgba(192,132,252,.12);
+  color: #c084fc;
+  border: 1px solid rgba(192,132,252,.25);
 }
 .exp-card__role { font-size: 1rem; font-weight: 600; color: var(--accent); }
 .exp-card__detail {
@@ -796,4 +891,13 @@ ul { list-style: none; }
   .footer__inner { flex-direction: column; text-align: center; }
   .certs-grid { grid-template-columns: 1fr; }
   .cert-card--edu { grid-column: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__title em,
+  .section__title em,
+  .dual-pill--clinical { animation: none; }
+  .hero__title em::before, .hero__title em::after,
+  .section__title em::before, .section__title em::after { animation: none; }
+  .dual-pill--clinical::after { display: none; }
 }
