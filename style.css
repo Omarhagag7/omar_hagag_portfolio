@@ -500,6 +500,26 @@ ul { list-style: none; }
 }
 .exp-card--clinical:hover { border-color: var(--border-hover); }
 
+.exp-card__logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.exp-card__logos {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+.exp-card__logos img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
 .exp-card__header { display: flex; flex-direction: column; gap: .4rem; }
 .exp-card__meta { display: flex; align-items: center; gap: .75rem; }
 .exp-card__company { font-size: .95rem; font-weight: 700; color: var(--text); }
